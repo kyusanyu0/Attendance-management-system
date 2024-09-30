@@ -1,0 +1,12 @@
+
+<form method="POST">
+    {% csrf_token %}
+    <button type="submit" name="check_in">出勤打刻</button>
+    <button type="submit" name="check_out">退勤打刻</button>
+    <button type="submit" name="reset_records">記録リセット</button>
+    <!-- 休憩打刻のボタンも追加 -->
+
+
+    <a href="{% url 'attendance_records' %}">打刻記録確認</a>
+    <a href="{% url 'logout' %}">ログアウト</a>
+</form>

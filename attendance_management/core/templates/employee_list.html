@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>従業員一覧</title>
+</head>
+<body>
+    <h1>従業員一覧</h1>
+    <ul>
+        {% for employee in employees %}
+            <li>
+                {{ employee.name }} - <a href="{% url 'attendance_records' employee.id %}">打刻記録を見る</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

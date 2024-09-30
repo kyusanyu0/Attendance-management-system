@@ -1,0 +1,17 @@
+
+<table>
+    <tr>
+        <th>出勤</th>
+        <th>退勤</th>
+        <th>休憩開始</th>
+        <th>休憩終了</th>
+    </tr>
+    {% for record in records %}
+    <tr>
+        <td>{{ record.check_in }}</td>
+        <td>{{ record.check_out }}</td>
+        <td>{{ record.break_start }}</td>
+        <td>{{ record.break_end }}</td>
+    </tr>
+    {% endfor %}
+</table>
